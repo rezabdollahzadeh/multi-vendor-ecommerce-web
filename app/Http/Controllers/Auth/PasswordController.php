@@ -22,6 +22,12 @@ class PasswordController extends Controller
 
         $request->user()->update([
             'password' => Hash::make($validated['password']),
+            'title' => ['required', 'unique:posts', 'max:255'],
+            'body' => ['required'],
+            'another.name' => 'required',
+            'phone' => 'required',
+            'lastName' => ['required', 'string', 'min:8'],
+
         ]);
 
         return back()->with('status', 'password-updated');

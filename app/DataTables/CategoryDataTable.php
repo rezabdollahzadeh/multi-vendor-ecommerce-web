@@ -34,16 +34,24 @@ class CategoryDataTable extends DataTable
                 return '<i style="font-size:30px" class="' . $query->icon . '"></i>';
             })
             ->addColumn('status', function ($query) {
-                $button = '<label class="custom-switch mt-2">
-                     <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input">
+                if ($query->status == 1) {
+                    $button = '<label class="custom-switch mt-2">
+                     <input type="checkbox" checked name="custom-switch-checkbox" data-id="' . $query->id . '"
+                      class="custom-switch-input change-status">
                      <span class="custom-switch-indicator"></span>
                      </label>';
+                } else {
+                    $button = '<label class="custom-switch mt-2">
+                     <input type="checkbox" name="custom-switch-checkbox" data-id="' . $query->id . '"
+                     class="custom-switch-input change-status">
+                     <span class="custom-switch-indicator"></span>
+                     </label>';
+                }
 
                 return $button;
             })
             ->rawColumns(['icon', 'action', 'status'])
-            ->
-            setRowId('id');
+            ->setRowId('id');
     }
 
     /**

@@ -4,7 +4,7 @@
     <!-- Main Content -->
     <section class="section">
         <div class="section-header">
-            <h1>Category</h1>
+            <h1>Sub Category</h1>
         </div>
 
         <div class="section-body">
@@ -13,10 +13,10 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>All Categories</h4>
+                            <h4>All Sub Categories</h4>
                             <div class="card-header-action">
-                                <a href="{{route('admin.category.create')}}" class="btn btn-primary"><i
-                                        class="fas fa-plus"></i>Create New</a>
+                                <a href="{{route('admin.sub-category.create')}}" class="btn btn-primary"><i
+                                            class="fas fa-plus"></i>Create New</a>
                             </div>
                         </div>
                         <div class="card-body">¬
@@ -40,7 +40,7 @@
                 let id = $(this).data('id');
 
                 $.ajax({
-                    url: "{{ route('admin.category.change-status') }}",
+                    url: "{{ route('admin.sub-category.change.status') }}",
                     method: 'PUT',
                     data: {
                         status: isChecked,

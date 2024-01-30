@@ -2,10 +2,10 @@
 
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\ChildCategoryController;
 use App\Http\Controllers\Backend\ProfileController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\SubCategoryController;
-use App\Http\Controllers\ChildCategoryController;
 use Illuminate\Support\Facades\Route;
 
 /** Admin Routes */

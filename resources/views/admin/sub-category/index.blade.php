@@ -16,15 +16,17 @@
                             <h4>All Sub Categories</h4>
                             <div class="card-header-action">
                                 <a href="{{route('admin.sub-category.create')}}" class="btn btn-primary"><i
-                                            class="fas fa-plus"></i>Create New</a>
+                                        class="fas fa-plus"></i> Create New</a>
                             </div>
                         </div>
-                        <div class="card-body">¬
+                        <div class="card-body">
                             {{ $dataTable->table() }}
                         </div>
+
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -40,7 +42,7 @@
                 let id = $(this).data('id');
 
                 $.ajax({
-                    url: "{{ route('admin.sub-category.change-status') }}",
+                    url: "{{route('admin.sub-category.change-status')}}",
                     method: 'PUT',
                     data: {
                         status: isChecked,
